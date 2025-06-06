@@ -1,0 +1,165 @@
+%-------------------------
+% Resume in Latex
+% Author : Audric Serador
+% Inspired by: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,12pt]{article}
+
+\usepackage{fontawesome5}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+% Custom font
+\usepackage[default]{lato}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------%
+% Custom commands (defined directly in this file)
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\definecolor{Black}{RGB}{0, 0, 0}
+\newcommand{\seticon}[1]{\textcolor{Black}{\csname #1\endcsname}}
+
+%-------------------------%
+\begin{document}
+
+%----------HEADING----------%
+\begin{center}
+    \textbf{\fontsize{11}{13.2}\selectfont \scshape Abhinandan Mohan Raj} \\ \vspace{1pt}
+    \seticon{faPhone} \ \fontsize{11}{13.2}\selectfont 512-698-3345 \quad
+    \href{mailto:abhinandan3047@gmail.com}{\seticon{faEnvelope} \underline{\fontsize{11}{13.2}\selectfont abhinandan3047@gmail.com}} \quad
+    \href{https://www.linkedin.com/in/abhinandan-mohanraj/}{\seticon{faLinkedin} \underline{\fontsize{11}{13.2}\selectfont linkedin.com/abhinandan-mohanraj}} \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad
+    \href{https://github.com/abhi3047}{\seticon{faGithub} \underline{\fontsize{11}{13.2}\selectfont github.com/abhi3047}}
+\end{center}
+
+%-----------EDUCATION-----------%
+\section{Education}
+    \resumeSubHeadingListStart
+
+    \resumeSubheading
+    {The University of Texas at Dallas}{Aug 2018 - May 2020}
+    {Master of Science in Business Analytics (GPA: 3.91 / 4.00)}{Dallas, Texas}
+    \resumeSubheading
+    {Anna University}{May 2011 - May 2015}
+    {Bachelor of Engineering in Electronics and Communication (GPA: 3.62 / 4.00)}{Chennai, India}
+    \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------%
+% This section was not provided in the input, assuming it's empty or comes from src/skills.tex if you provide content later.
+% For now, it will just show the section title.
+\section{Skills}
+\resumeSubHeadingListStart
+% Add your skills content here. Example:
+% \resumeSubSubheading{Programming Languages:}{C#, Java, Python, JavaScript, TypeScript, Go}
+% \resumeSubSubheading{Frameworks:}{.NET Core, Spring Boot, React, Angular, Node.js, Semantic Kernel, Orleans}
+% \resumeSubSubheading{Cloud Technologies:}{Azure (App Services, AKS, Cosmos DB, Service Bus, Blob Storage, Azure Functions, Azure AI Foundry), AWS}
+% \resumeSubSubheading{Tools & Methodologies:}{CI/CD (Azure Pipelines, Helm), Docker, Kubernetes, Git, Unit Testing, A/B Testing, Microservices, RESTful APIs, GraphQL}
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------%
+\section{Experience}
+\resumeSubHeadingListStart
+
+    \resumeSubheading
+    {Microsoft}{Oct 2024 -- Present}
+    {\textbf{Software Engineer 2}, CFAR Platform}{Redmond, WA}
+    \resumeItemListStart
+        \resumeItem{Architected and implemented a domain verification \textbf{AI agent} leveraging the Semantic Kernel framework, reducing \textbf{human review time by 70\%} and automating 90\% of all verification cases.}
+        \resumeItem{Led the successful production deployment of the Deny Assignment service, building robust CI/CD pipelines and incorporating unit testing to \textbf{remediate 220K Azure subscriptions}.}
+        \resumeItem{Enhanced Software Download Service's efficiency and decision-making by successfully integrating CFAR, allowing a transition from threat metrics to CFAR's algorithms and achieving a \textbf{40\% reduction in CPU consumption}.}
+    \resumeItemListEnd
+    \vspace{0.5cm}
+    \resumeSubheading
+    {Microsoft}{Feb 2022 -- Oct 2024}
+    {\textbf{Software Engineer}, Azure Platform}{Redmond, WA}
+    \resumeItemListStart
+        \resumeItem{Scaled user experience for \textbf{1 million MAU} on the Engage Hub portal by implementing debounce  logic and global distributed lock on the provisioning service. This eliminated race conditions during  provisioning and reduced customer support tickets by 70\%}
+        \resumeItem{Implemented an event-driven architecture, decoupling microservices and enabling User Management service to scale efficiently for 500K active users. This resulted in a \textbf{60\% reduction in  response time}, improving user responsiveness and overall system performance. }
+        \resumeItem{Enhanced product security through a strategic migration of 12 microservices from AD Graph to the  more secure MS Graph. This proactive measure \textbf{resolved 48 security bugs}, mitigating potential risks  and security vulnerabilities. }
+        \resumeItem{Achieved a \textbf{50\% improvement in data latency} by implementing real-time data synchronization  between Kusto and Cosmos DB using change feeds. Automated Kusto cluster and database  deployments with ARM templates, streamlining infrastructure provisioning for data analysis. }
+    \resumeItemListEnd
+    \vspace{0.5cm}
+      \resumeSubheading
+    {Microsoft}{May 2020 -- Feb 2022}
+    {\textbf{Data \& Applied Scientist}, Office Platform}{Redmond, WA}
+    \resumeItemListStart
+        \resumeItem{Developed Data Correctness (DC) module in Kusto and integrated it with our existing ADF pipelines  to ensure data accuracy in our business metrics and reduced backfilling by 40\%.
+}
+        \resumeItem{Designed and developed an optimized ADF pipeline for Office Scripts, to handle the Comsos data  uptick due to OBD releases. The improved pipeline reduced the runtime of client dependent  functions by 30\%.  }
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}
